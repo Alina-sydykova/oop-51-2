@@ -1,0 +1,16 @@
+команды на один раз в проекте
+git init  это команда для создания скрытого файла .git
+
+git remote add origin https://github.com/Alina-sydykova/oop-51-2.git это нужн для привязки реп
+Команды на один раз для устройства пк или ноут
+git config --global user.name "Your name"
+git config --global user.email "your-email@example.com"
+
+Команды которые часто используются в проекте
+
+git add .    |  Команда копирует и сохраняет в буфер ( Невидемый )
+git commit -m "commit message"    | Команда сохраняет изменения в файле .git
+git push origin master | Команда отправляет изменения в репозиторий и сохраняет его там
+git branch   | Команда для просмотра списка веток
+git status   | Команда для просмотра состояния проекта или просмотра изменений
+git pull origin master | Команда для получения изменений из репозитория
