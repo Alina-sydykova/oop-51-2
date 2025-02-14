@@ -1,15 +1,26 @@
-# hw3.py
+from faker import Faker
 
-# Библиотека colorama используется для добавления цветного текста и стилей в консольный вывод.
-# Это полезно для выделения важных частей текста или создания более читаемых логов.
+fake = Faker()
 
-from colorama import init, Fore, Style
+class Student:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
 
-# Инициализация библиотеки для работы на Windows (на других системах работает автоматически)
-init(autoreset=True)
+    def introduce(self):
+        return f"Hello, my name is {self.name} and I live at {self.address}."
 
-# Пример использования:
-print(Fore.RED + 'Этот текст будет красным.')
-print(Fore.GREEN + 'Этот текст будет зелёным.')
-print(Style.BRIGHT + 'Этот текст будет ярким.')
-print(Fore.BLUE + Style.DIM + 'Синий и тусклый текст.')
+student1 = Student(fake.name(), fake.address())
+student2 = Student(fake.name(), fake.address())
+student3 = Student(fake.name(), fake.address())
+
+print(student1.introduce())
+print(student2.introduce())
+print(student3.introduce())
+
+
+""""Библиотека `Faker` используется для генерации случайных фейковых данных, таких 
+как имена, адреса, номера телефонов и многое другое. Она полезна для тестирования, заполнения
+ баз данных и обучения. Каждый вызов метода Faker создаёт новые случайные данные."""
+
+
